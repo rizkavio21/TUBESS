@@ -10,7 +10,8 @@ class Utama extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Utama/One');
+		$data['title'] = 'Hellomotion.com';
+		$this->load->view('Utama/One',$data);
 		$this->load->view('Utama/1');	
 	}
 }

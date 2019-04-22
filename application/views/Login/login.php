@@ -14,6 +14,7 @@
             <div class="row">
               <div class="col-lg">
                 <div class="p-5">
+                  <?= $this->session->flashdata('message'); ?>
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">USER ACCOUNT</h1>
                   </div>

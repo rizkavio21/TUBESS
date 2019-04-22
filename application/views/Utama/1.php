@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="Banner mx-auto justify-content-center" >
-        <img src="assets/banner.jpg"/>
+        <img src="<?php echo base_url(); ?>assets/banner.jpg"/>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -25,13 +25,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/1jpg.jpg" alt="First slide">
+                <img class="d-block w-100" src="<?php echo base_url(); ?>assets/1jpg.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="assets/2.jpg" alt="Second slide">
+                <img class="d-block w-100" src="<?php echo base_url(); ?>assets/2.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="assets/3.jpg" alt="Third slide">
+                <img class="d-block w-100" src="<?php echo base_url(); ?>assets/3.jpg" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -51,10 +51,10 @@
                         margin:50px 20px;">
                             <table>
                                 <td>
-                                    <img class = "k1" href="#" src="assets/iklan1.jpg"/>
+                                    <img class = "k1" href="#" src="<?php echo base_url(); ?>assets/iklan1.jpg"/>
                                 </td>
                                 <td>
-                                    <img style = "margin:0 13px 0px 13px;" class = "k2" href="#" src="assets/iklan2.jpg"/>
+                                    <img style = "margin:0 13px 0px 13px;" class = "k2" href="#" src="<?php echo base_url(); ?>assets/iklan2.jpg"/>
                                 </td>
                             </table>
                         </div>
@@ -65,18 +65,18 @@
                     <h3 class="col-md-10" style=" background-color:#1aaed0; color:white; height:50px;">karya terbaru</h3>
                     <table>
                         <td>
-                            <img class="foto" href = "#" src="assets/bro 001.jpg" style="width:217px; 
+                            <img class="foto" href = "#" src="<?php echo base_url(); ?>assets/bro 001.jpg" style="width:217px; 
                     height:217px; margin: 0 12px 24px 0px; "/>
                         <td>
-                            <img href = "#" src="assets/bro002.jpg" style="width:217px; 
+                            <img href = "#" src="<?php echo base_url(); ?>assets/bro002.jpg" style="width:217px; 
                     height:217px; margin: 0 12px 24px 12px;"/>
                         </td>
                         <td>
-                            <img href = "#" src="assets/bro03.jpg"style="width:217px; 
+                            <img href = "#" src="<?php echo base_url(); ?>assets/bro03.jpg"style="width:217px; 
                     height:217px; margin: 0 12px 24px 12px;"/>
                         </td>
                         <td>
-                            <img href = "#" src="assets/bro04.jpg"style="width:217px; 
+                            <img href = "#" src="<?php echo base_url(); ?>assets/bro04.jpg"style="width:217px; 
                     height:217px; margin: 0 0px 24px 12px;"/>
                         </td>
                     </table>
@@ -90,22 +90,22 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <img style="margin: 0 24px 12px 0;" class="isinyakiri" href = "#" src="assets/11.jpg">
+                                        <img style="margin: 0 24px 12px 0;" class="isinyakiri" href = "#" src="<?php echo base_url(); ?>assets/11.jpg">
                                         
                                     </td>
                                     <td>
-                                        <img style="margin: 0 24px 12px 0px;" class="isinya" href = "#" src="assets/12.jpg"/>
+                                        <img style="margin: 0 24px 12px 0px;" class="isinya" href = "#" src="<?php echo base_url(); ?>assets/12.jpg"/>
                                         
                                     </td>
                                 </tr>
                                     <td>
-                                        <img class= "isinyakiri" href = "#" src="assets/13.jpg"/>
+                                        <img class= "isinyakiri" href = "#" src="<?php echo base_url(); ?>assets/13.jpg"/>
                                         <div class="isikonten">
                                             <p>Uzone.id X HelloMotion Family Gathering Volume 6!</p>
                                         </div> 
                                     </td>
                                     <td>
-                                        <img class= "isinya" href = "#" src="assets/14.jpg"/>
+                                        <img class= "isinya" href = "#" src="<?php echo base_url(); ?>assets/14.jpg"/>
                                         <div class="isikonten">
                                             <p>Desain Fotoset Foto Presiden & Wakil Presiden 2019-2014</p>
                                         </div> 

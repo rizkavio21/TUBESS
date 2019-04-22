@@ -26,14 +26,23 @@ class Hello extends CI_Controller {
 		$username = $this->input->post('uname');
 		$password = $this->input->post('psw');
 		$checkLogin = $this->hellomotion->checkUser($username, $password);
+		// $data['user'] = $this->db->get_where('registrasi', ['username' => $this->session->userdata('uname')])->row_array();
+
 		// var_dump($checkLogin);
 
-		if ( !empty($checkLogin)) {
-			redirect('index.php/daftar/index');//kalo ada isinya dan bener
+		if ( !empty($checkLogin)) { // login berhasil
+			$this->session->set_userdata($checkLogin);
+			redirect('index.php/tampilan/index');
 		}
 		else {
 			redirect('index.php/Hello/Login');
 		}
 	}
+	public function logout() {
+		// $this->session->sess_destroy();
+		$this->session->unset_userdata($username);
+		redirect('index.php/Hello/Login');
+	}
+	
 }
 ?>

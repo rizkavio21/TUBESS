@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-  <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/favicon.ico">
-  <title><?= $title; ?> </title>
+  <link rel="shortcut icon" href="<?php echo base_url(); ?>TUBESS/assets/favicon.ico">
+  <title>hellomotion.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -58,36 +58,30 @@
       background-color: #6D6D6D;
       border: solid 0px #6d6d6d;
     }
-    img:hover{
-      cursor: pointer;
-    }
-    .afternav{
-			display: block;
-		}
   </style>
 </head>
 <body>
   <div class="navbar">
     <ul class="navbar navbar-default navbar-fixed-top">
       <li class="navbar-brand" href="#">
-        <a href="<?php echo site_url('index.php/utama/index'); ?>">
-          <img src="<?php echo base_url(); ?>assets/logo.png" >
-        </a>
+        <img src="<?php echo base_url(); ?>/assets/logo.png" href="<?php echo site_url('index.php/')?>">
       </li> 
-        <a class="nav-item nav-link" href="<?php echo site_url('index.php/utama/index'); ?>">HOME</a>
+        <a class="nav-item nav-link" href="#">HOME</a>
         <a class="nav-item nav-link" href="#">PARTISIPASI</a>
         <a class="nav-item nav-link" href="#">BLOG</a>
         <a class="nav-item nav-link" href="#">ACADEMY</a>
-        <a class="nav-item nav-link" href="<?php echo site_url('index.php/hellofest/index'); ?>">HELLO FEST</a>
+        <a class="nav-item nav-link" href="#">HELLO FEST</a>
         <div id="userinfo" class="nav navbar-nav navbar-right">
           <div class="hai" style="display: flex; background-color: #6d6d6d;">
-            <a class="btn btn-secondary" href="<?php echo site_url('index.php/daftar/index'); ?>">Daftar </a>
-            <a class="btn btn-secondary" href="<?php echo site_url('index.php/Hello/login'); ?>">Login </a>
+            <a class="btn btn-secondary" href="#"><?php print_r($_SESSION['fullname']); ?> </a>
+              <div >
+                <a class="btn btn-secondary" href="<?php echo base_url('dashboard/logout'); ?>">Logout</a>
+              </div>
           </div>
       </li>
     </ul>
   </div>
-  <img  style="width: 100%" class="afternav" src="<?php echo base_url(); ?>assets/afternav.png";>
+  </div>
 
 </body>
 </html>
