@@ -16,9 +16,36 @@
             // die;
         }
         public function tampiledit(){
-            $this->load->view('tampilan/header');
-            $this->load->view('tampilan/dataedit');
+            $data['user'] = $this->db->get_where('registrasi', ['username' => $this->session->userdata('username')])->row_array();
+            $user = $data['user']['username'];
+            $checkUser = $this->hellomotion->getUserbyUname($user);
+            $data['user'] = $checkUser;
+            $this->load->view('tampilan/header', $data);
+            $this->load->view('tampilan/dataedit', $data);
         }
+        public function edit() {
+            $data['user'] = $this->db->get_where('registrasi', ['username' => $this->session->userdata('username')])->row_array();
+            $user = $data['user']['username'];
+            $edit = $this->hellomotion->editData($user);
+            // var_dump($edit);
+            redirect('index.php/tampilan/tampiledit');
+        }
+        public function tampilprofil(){
+            $data['user'] = $this->db->get_where('registrasi', ['username' => $this->session->userdata('username')])->row_array();
+            $user = $data['user']['username'];
+            $checkUser = $this->hellomotion->getUserbyUname($user);
+            $data['user'] = $checkUser;
+            $this->load->view('tampilan/header', $data);
+            $this->load->view('tampilan/dataprofil', $data);
+        }
+        public function edit2() {
+            $data['user'] = $this->db->get_where('registrasi', ['username' => $this->session->userdata('username')])->row_array();
+            $user = $data['user']['username'];
+            $edit = $this->hellomotion->editProfil($user);
+            // var_dump($edit);
+            redirect('index.php/tampilan/tampiledit');
+        }
+
     
     }
 

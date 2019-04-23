@@ -47,6 +47,38 @@
             $this->db->where('username', $username);
             return $this->db->get('registrasi')->row_array();
         }
+        public function editData($username) {
+            $password = $this->input->post('psww', true);
+            $email = $this->input->post('email',true);
+            $this->db->where('username', $username);
+            $this->db->set('email', $email);
+            $this->db->set('passwordd', $password);
+            return $this->db->update('registrasi');
+        }
+        public function editProfil($username){
+            $fullname = $this->input->post('fullname');
+            $tanggal = $this->input->post('fullname');
+            $bulan = $this->input->post('profile_tanggal_lahir[month]');
+            $tanggal = $this->input->post('profile_tanggal_lahir[day]');
+            $tahun = $this->input->post('profile_tanggal_lahir[year]');
+            $kota = $this->input->post('kota',true);
+            $province = $this->input->post('Provinsi',true);
+            $no_phone = $this->input->post('phone',true);
+            $pekerjaan = $this->input->post('job',true);
+            $twitter = $this->input->post('account',true);
+            $this->db->where('username', $username);
+            $this->db->set('fullname', $fullname);
+            $this->db->set('tgl', $tanggal);
+            $this->db->set('bln', $bulan);
+            $this->db->set('tahun', $tahun);
+            $this->db->set('kota', $kota);
+            $this->db->set('province', $province);
+            $this->db->set('no_phone', $no_phone);
+            $this->db->set('pekerjaan', $pekerjaan);
+            $this->db->set('twitter', $twitter);
+            return $this->db->update('registrasi');
+
+        }
         
     }
 ?>

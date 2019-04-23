@@ -12,81 +12,103 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel='stylesheet'>
  
   <style type="text/css">
-    body{
-      font-family: 'Montserrat' , sans-serif;
-      font-weight: bolder;
-      font-size:16px;
-    }
-    .carousel-inner img {
-      width: 100%;
-      height: 100%;
-    }
-  
-    .navbar{
-      background-color: #1aaed0;
-      text-align:center;
-      margin-right: auto;
-      margin-left: auto;
-
-    }
-    .nav-link{
-      color: #FFFFFF;
-      position: relative;
-      font-weight:bold;
-      content: 52px 20px;
-      padding: 0 8px 0 8px;
-    }
-    .nav-link:hover {
-    color: #FFFF00;
-    }
-    .button{
-      background-color: grey;
-      border: none;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-      cursor: pointer;
-      top: 70px;
-      
-    }
-    .btn {
-      background-color: #6D6D6D;
-      border-radius: 0px;
-      border: solid 0px #6d6d6d;
-    }
-    .btn:hover {
-      background-color: #6D6D6D;
-      border: solid 0px #6d6d6d;
-    }
-    img:hover{
-      cursor: pointer;
-    }
-    .afternav{
+   .navbar-brand{
+			margin-left: 120px;
+		}
+		.nav-link{
+			color: white;
+			font-size: 16px;
+		}
+		.afternav{
 			display: block;
 		}
-  </style>
+		.div-input{
+			background-color: #6d6d6d;
+			margin-left: 150px;
+		    line-height: 35px;
+		    position: relative;
+		}
+		.input{
+			width: 150px;
+			height: 37px;
+    		font-size: 16px;
+		    padding: 0 10px;
+		    color: #fff;
+		}
+		.title-section{
+			background-color: #1aaed0;
+    		font-family: 'Montserrat', sans-serif;
+		    font-size: 16px;
+		    line-height: 50px;
+		    padding: 0 18px;
+		    display: block;
+		    color: #fff;
+		    margin: 20px 0;
+		    margin-bottom: -20px;
+		    font-weight: bold;
+		}
+		#page-content{
+			background-color: #fff;
+		    min-height: 500px;
+		    padding: 30px 0 50px 0;
+		}	
+		.table thead th{
+			border-top: none;
+			border-bottom: 3px solid white;
+		}
+		#main-footer {
+    		background-color: #000;
+    		height: 45px;
+    		color: #fff;
+		}
+		tbody td h3,p{
+			margin-left: -20px;
+		}
+		tbody td h3{
+			font-size: 20px;
+		}
+		tbody td h3:hover{
+			color: #ff8566;
+			text-decoration: underline;
+		}
+		.nav-link:hover
+		{
+			color:#ffff66;
+		}
+	</style>
 </head>
 <body>
-  <div class="navbar">
-    <ul class="navbar navbar-default navbar-fixed-top">
-      <li class="navbar-brand" href="#">
-        <a href="<?php echo site_url('index.php/utama/index'); ?>">
-          <img src="<?php echo base_url(); ?>assets/logo.png" >
-        </a>
-      </li> 
-        <a class="nav-item nav-link" href="<?php echo site_url('index.php/utama/index'); ?>">HOME</a>
-        <a class="nav-item nav-link" href="#">PARTISIPASI</a>
-        <a class="nav-item nav-link" href="#">BLOG</a>
-        <a class="nav-item nav-link" href="#">ACADEMY</a>
-        <a class="nav-item nav-link" href="<?php echo site_url('index.php/hellofest/index'); ?>">HELLO FEST</a>
-        <div id="userinfo" class="nav navbar-nav navbar-right">
-          <div class="hai" style="display: flex; background-color: #6d6d6d;">
-            <a class="btn btn-secondary" href="<?php echo site_url('index.php/daftar/index'); ?>">Daftar </a>
-            <a class="btn btn-secondary" href="<?php echo site_url('index.php/Hello/login'); ?>">Login </a>
-          </div>
-      </li>
-    </ul>
-  </div>
+<div id="mainNav">
+    <nav class="navbar navbar-expand-sm" style="background-color: #1aaed0;">
+      <!-- Brand/logo -->
+      <a class="navbar-brand" href="<?php echo site_url('index.php/utama/index'); ?>">
+        <img style="margin-left: 130px;" src="<?php echo base_url(); ?>assets/logo.png";>
+      </a>
+      
+      <!-- Links -->
+      <ul class="navbar-nav" style="font-weight: bold;">
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo site_url('index.php/utama/index'); ?>">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">PARTISIPASI</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo site_url('index.php/blog/index'); ?>">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ACADEMY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo site_url('index.php/hellofest/index'); ?>">HELLOFEST</a>
+        </li>
+      </ul>
+      <div class="div-input">
+        <a href="<?php echo site_url('index.php/daftar/index'); ?>" style="text-decoration: none;"><span class="input">Daftar!</span></a>
+        <a href="<?php echo site_url('index.php/Hello/login'); ?>" style="text-decoration: none;"><span class="input">Login</span></a>
+      </div>
+    </nav>
+</div>
   <img  style="width: 100%" class="afternav" src="<?php echo base_url(); ?>assets/afternav.png";>
 
 </body>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head> 
   <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/favicon.ico">
-  <title>hellomotion.com</title>
+  <title><?php echo $user['fullname']; ?> |HelloMotion.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -10,7 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel='stylesheet'>
- 
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  
   <style type="text/css">
     body{
       font-family: 'Montserrat' , sans-serif;
@@ -47,17 +48,13 @@
       font-size: 16px;
       cursor: pointer;
       top: 70px;
-      
     }
     .btn {
       background-color: #6D6D6D;
       border-radius: 0px;
       border: solid 0px #6d6d6d;
     }
-    .btn:hover {
-      background-color: #6D6D6D;
-      border: solid 0px #6d6d6d;
-    }
+    
     li{
       list-style-type:none;
     }
@@ -74,21 +71,25 @@
         <a class="nav-item nav-link" href="#">BLOG</a>
         <a class="nav-item nav-link" href="#">ACADEMY</a>
         <a class="nav-item nav-link" href="#">HELLO FEST</a>
-        <div id="userinfo" class="nav navbar-nav navbar-right">
-          <div class="hai" style="display: flex; background-color: #6d6d6d;">
-          <li class="dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#"><?php echo $user['fullname']; ?></a></a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Akun Saya</a>
-                    <a class="dropdown-item" href="#">Kirim Konten</a>
-                    <a class="dropdown-item" href="<?php echo base_url('index.php/Hello/logout'); ?>">Logout</a>
-                </div>
-            </li>
-            </div>   
-          </div>
+        <div class="dropdown">
+            <button type="button" href="<?php echo $user['fullname']; ?>" class="btn btn-primary" data-toggle="dropdown">
+            <?php echo $user['fullname']; ?>
+            </button>
+            <div class="dropdown-menu"syle="width:100px;">
+              <li>
+                <a syle="color:white;" href="<?php echo base_url('index.php/tampilan/tampiledit'); ?>"><i class='fas fa-user'></i>Akun Saya</a>
+              </li>
+              <li>
+                <a href="#"><i class='fas fa-pencil-alt'></i>Kirim Konten</a>
+              </li>
+              <li>
+                <a href="<?php echo base_url('index.php/Hello/logout'); ?>"><i class='fas fa-power-off'></i>Logout</a>
+              </li>
+            </div>
+        </div>
     </ul>
   </div>
-  </div>
+  <img  style="width: 100%" class="afternav" src="<?php echo base_url(); ?>assets/afternav.png";>
 
 </body>
 </html>

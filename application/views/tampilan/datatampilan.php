@@ -7,7 +7,7 @@
     }
 </style>
 
-<div class="container">
+<div class="container col-sm-7">
 	<div class="row-fluid">
 		<div class="span8">
             <h3 style="color:grey;">Akun Saya</h3>
@@ -15,11 +15,11 @@
 				<div id="tabs-wrapper" class="clear-block">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">View</a>
+                        <a class="nav-link active" href="<?php echo ('index');?>">View</a>
                     </li>
                     <li class="nav-item">
-                        <a style = "color:black;"class="nav-link" href="#">Edit</a>
-                    </li>        
+                        <a style = "color:black;"class="nav-link" href="<?php echo ('tampiledit');?>">Edit</a>
+                    </li>     
 				</div>		  					  					  					  	
 				  <h3>Profil</h3><hr>
 				<dl>
