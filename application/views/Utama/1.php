@@ -60,7 +60,7 @@
                         </div>
                 </div>
             </div>
-            <div class="Karya">
+            <div class="Karya" style=" margin-left:-85px; margin-right:100px; width:100%;">
                 <div class="container" id="container">
                     <h3 class="col-md-10" style=" background-color:#1aaed0; color:white; height:50px;">karya terbaru</h3>
                     <table>

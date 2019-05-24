@@ -77,7 +77,31 @@
             $this->db->set('pekerjaan', $pekerjaan);
             $this->db->set('twitter', $twitter);
             return $this->db->update('registrasi');
-
+        }
+        public function deleteAccount(){
+            return $this->db->query("DELETE FROM `partisipasi` WHERE `id` = '$id'"); 
+        }
+        public function checkAdmin($username, $password) {
+            $this->db->where('username', $username);
+            $this->db->where('password', $password);
+            return $this->db->get('admin')->num_rows();
+        }
+        public function getAdmin($username, $password) {
+            $this->db->where('username', $username);
+            $this->db->where('password', $password);
+            return $this->db->get('admin')->result();
+        }
+        public function tampilPartisipasi(){
+            return $this->db->query("SELECT * FROM `partisipasi`")->result();
+        }
+        public function selectPartisipasiById($id){
+            return $this->db->query("SELECT * FROM `partisipasi` WHERE `id`='$id'")->result();
+        }
+        public function editPartisipasi($id, $project, $type, $deadline, $entries, $award){
+            return $this->db->query("UPDATE `partisipasi` SET `project`='$project',`type`='$type',`deadline`='$deadline',`entries`='$entries',`award`='$award' WHERE `id`='$id'");   
+        }
+        public function querydelete($id){
+            return $this->db->query("DELETE FROM `partisipasi` WHERE `id` = '$id'");   
         }
         
     }

@@ -64,16 +64,18 @@
   <div class="navbar">
     <ul class="navbar navbar-default navbar-fixed-top">
       <li class="navbar-brand" href="#">
-        <img src="<?php echo base_url(); ?>/assets/logo.png" href="<?php echo site_url('index.php/')?>">
+        <a class="navbar-brand" href="<?php echo site_url('index.php/utama/index'); ?>">
+          <img src="<?php echo base_url(); ?>/assets/logo.png" href="<?php echo site_url('index.php/')?>">
+        </a>
       </li> 
-        <a class="nav-item nav-link" href="#">HOME</a>
+        <a class="nav-item nav-link" href="<?php echo site_url('index.php/utama/index'); ?>">HOME</a>
         <a class="nav-item nav-link" href="#">PARTISIPASI</a>
-        <a class="nav-item nav-link" href="#">BLOG</a>
+        <a class="nav-item nav-link" href="<?php echo site_url('index.php/blog/index'); ?>">BLOG</a>
         <a class="nav-item nav-link" href="#">ACADEMY</a>
-        <a class="nav-item nav-link" href="#">HELLO FEST</a>
+        <a class="nav-item nav-link" href="<?php echo site_url('index.php/hellofest/index'); ?>">HELLO FEST</a>
         <div class="dropdown">
             <button type="button" href="<?php echo $user['fullname']; ?>" class="btn btn-primary" data-toggle="dropdown">
-            <?php echo $user['fullname']; ?>
+             <b> <?php echo $user['fullname']; ?> </b>
             </button>
             <div class="dropdown-menu"syle="width:100px;">
               <li>
@@ -89,7 +91,7 @@
         </div>
     </ul>
   </div>
-  <img  style="width: 100%" class="afternav" src="<?php echo base_url(); ?>assets/afternav.png";>
+  <img  style="width: 100%; display:block;" class="afternav" src="<?php echo base_url(); ?>assets/afternav.png";>
 
 </body>
 </html>

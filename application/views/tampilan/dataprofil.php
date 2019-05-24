@@ -25,7 +25,7 @@
                     </li>     
                 </div>
         </div>
-        <form action="edit" method="POST"  id="user-profile-form" >
+        <form action="edit2" method="POST"  id="user-profile-form" >
             <div>
             <ul class="nav" style="color: black;">
                 <li class="nav-item">     
@@ -110,5 +110,5 @@
                     <br><input type="text" name="account" value="<?php echo $user['twitter']; ?>"></br>
                 </div>
             </div>
-        <input type="submit" style= "background-color:#249961;"name="op" id="edit-submit" value="Save"  class="btn btn-success btn-user form-submit ">
+        <input type="submit" style= "background-color:#249961;" name="op" id="edit-submit" value="Save"  class="btn btn-success btn-user form-submit ">
     </form>
